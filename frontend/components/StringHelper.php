@@ -2,6 +2,8 @@
 
 namespace frontend\components; 
 
+use Yii; 
+
 class StringHelper
 {
 	public $limit; 
