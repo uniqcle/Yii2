@@ -1,0 +1,24 @@
+[33m9e6c797[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31myii2-project/master[m[33m)[m HEAD@{0}: checkout: moving from 48477a719050bf783c3ed44515df27fa7cd08d12 to master
+[33m48477a7[m HEAD@{1}: revert: Revert "Работа с компонентом urlManager"
+[33m2466a4b[m HEAD@{2}: reset: moving to 2466a4b
+[33m9e6c797[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31myii2-project/master[m[33m)[m HEAD@{3}: reset: moving to 9e6c797
+[33m85db14f[m HEAD@{4}: commit: Простое консольное приложение
+[33m2466a4b[m HEAD@{5}: checkout: moving from 366704786d1ca9cb2224d9dc836af36dae4d48f1 to 2466a4bd4a148cd1132696cfcc21fa8a1219e58d
+[33m3667047[m HEAD@{6}: commit: test
+[33m414b198[m HEAD@{7}: commit: Revert "Работа с компонентом urlManager"
+[33m6b3e8e6[m HEAD@{8}: commit: Компонент urlManger
+[33m7e711af[m HEAD@{9}: revert: Revert "Работа с компонентом urlManager"
+[33m2466a4b[m HEAD@{10}: checkout: moving from master to 2466a4bd4a148cd1132696cfcc21fa8a1219e58d
+[33m9e6c797[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31myii2-project/master[m[33m)[m HEAD@{11}: commit (merge): urlManager
+[33mafa215b[m HEAD@{12}: commit: urlManager
+[33m317a836[m HEAD@{13}: commit: urlManager
+[33m2466a4b[m HEAD@{14}: reset: moving to HEAD~
+[33m651fb7b[m HEAD@{15}: commit: Работа с компонентом urlManager
+[33m2466a4b[m HEAD@{16}: commit: Работа с компонентом urlManager
+[33m0da5494[m HEAD@{17}: commit: Работа с почтой. Отправка письма с помощью компонента Swift/Mailer
+[33m996b1e5[m HEAD@{18}: commit: Регистрация компонента в качестве базового при запуске Yii
+[33mf7d221c[m HEAD@{19}: commit: Укорачиваем описание к статьям с классом StringHelper
+[33m31b002b[m HEAD@{20}: commit: Получение свойств глобального экземпляра класса приложения Yii2
+[33m04c0c5f[m HEAD@{21}: commit: Полученные данных из БД. Вывод в шаблон
+[33m7cdf860[m HEAD@{22}: commit: First Simple Yii2 App
+[33md59a131[m HEAD@{23}: commit (initial): Init Project
