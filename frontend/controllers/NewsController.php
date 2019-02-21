@@ -37,4 +37,6 @@ class NewsController extends Controller
 	    	'itemNew' => $itemNew
 		]);
 	}
+
+
 }

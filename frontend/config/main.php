@@ -36,6 +36,7 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+
         //Включаем ЧПУ
         'urlManager' => [
             'enablePrettyUrl' => true,
@@ -54,6 +55,7 @@ return [
 
             ],
         ],
+
         //Регистрируем класс в качестве компонента Yii
         'stringHelper' => [
             'class' => 'frontend\components\StringHelper',

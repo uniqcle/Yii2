@@ -1,6 +1,4 @@
 
-
-
 <h2><?=$itemNew['title'] ?></h2>
 <p><?=$itemNew['content'] ?></p>
 
