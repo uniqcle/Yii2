@@ -47,6 +47,28 @@ return [
         'stringHelper' => [
             'class' => 'frontend\components\StringHelper',
         ], 
+
+        //Регистрируем компонент отправки почты
+        // File config/main.php: 
+        'mailer' => [
+            'class' => 'yii\swiftmailer\Mailer',
+            'useFileTransport' => false, //Вкл./Выкл. тестового режима
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'smtp.yandex.ru',
+                'username' => 'un...@yandex.ru',
+                'password' => '******',
+                'port' => '465',
+                'encryption' => 'ssl',
+                 'streamOptions' => [
+                    'ssl' => [
+                        'allow_self_signed' => true,
+                        'verify_peer' => false,
+                        'verify_peer_name' => false,
+                    ],
+                ], 
+        ],
+],
          
     ],
     'params' => $params,
