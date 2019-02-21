@@ -39,6 +39,9 @@ class NewsController extends Controller
 	}
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 2466a4b... Работа с компонентом urlManager
+=======
+>>>>>>> 651fb7b01e67ba4490a8e5e9a7bd8f74d674a90c
 }
