@@ -31,18 +31,4 @@ class News
 
 		return $arResult;
 	}
-
-	/**
-	 * Получение одной записи
-	 */
-	public static function getItemNew($id){
-
-		$id = intval($id);
-
-		$sql = "SELECT * FROM news WHERE idnews = {$id}"; 
-
-		return Yii::$app->db->createCommand($sql)->queryOne();
-	}
-
-
 }

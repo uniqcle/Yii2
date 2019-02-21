@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- 
 
 Yii::$app->urlManager->createUrl(['news/view', 'id' => $item['idnews']]);
@@ -28,3 +29,14 @@ Url::to(['news/view', 'id' => $item['idnews']]);
 <?php endforeach; ?>
 
 
+=======
+<?php 
+
+foreach($list as $item):
+	if($item['status'] > 0){
+		echo '<h3>'.$item['title'].'</h3>'; 
+		echo '<p>'.$item['content'].'</p>'; 
+	}
+
+endforeach; 
+>>>>>>> parent of 2466a4b... Работа с компонентом urlManager

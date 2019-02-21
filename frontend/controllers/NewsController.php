@@ -11,7 +11,6 @@ class NewsController extends Controller
 
 	public function actionNewsList(){
 
-
 		 $maxNewsInList =  Yii::$app->params['maxNewsInList']; //Получили данные из массива параметров.
 
 		 //Получаем данные из Модели
@@ -22,6 +21,7 @@ class NewsController extends Controller
 		 	'list' => $list
 		 ]);
 	}
+<<<<<<< HEAD
 
 	/**
 	 * Генерация конкретной новости
@@ -39,4 +39,6 @@ class NewsController extends Controller
 	}
 
 
+=======
+>>>>>>> parent of 2466a4b... Работа с компонентом urlManager
 }
