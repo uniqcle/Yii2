@@ -11,6 +11,7 @@ class NewsController extends Controller
 
 	public function actionNewsList(){
 
+
 		 $maxNewsInList =  Yii::$app->params['maxNewsInList']; //Получили данные из массива параметров.
 
 		 //Получаем данные из Модели
@@ -20,5 +21,20 @@ class NewsController extends Controller
 		 return $this->render('newslist', [
 		 	'list' => $list
 		 ]);
+	}
+
+	/**
+	 * Генерация конкретной новости
+	 * @param id id-шник новости
+	 * @return 
+	 */
+	public function actionView($id){
+
+
+		$itemNew = News::getItemNew($id);
+
+		return $this->render('view',[ 
+	    	'itemNew' => $itemNew
+		]);
 	}
 }

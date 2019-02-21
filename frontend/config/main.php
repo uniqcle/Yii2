@@ -40,7 +40,18 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+
             'rules' => [
+                //Изменение url
+                'novosti'   => 'news/news-list', 
+                'news/<id:\d+>' => 'news/view',
+               // 'novosti/<id:\d+>/<test:\w+>' => 'news/view',
+                /* [
+                    'pattern' => 'novosti/<id:\d+>/<test:\w+>',
+                    'route' => 'news/view',
+                    'suffix' => '.json',
+                ],*/
+
             ],
         ],
         //Регистрируем класс в качестве компонента Yii
