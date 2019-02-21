@@ -1,4 +1,3 @@
-
 <!-- 
 
 Yii::$app->urlManager->createUrl(['news/view', 'id' => $item['idnews']]);
@@ -27,4 +26,5 @@ Url::to(['news/view', 'id' => $item['idnews']]);
 	<?php endif;  ?>
 
 <?php endforeach; ?>
+
 
