@@ -36,15 +36,24 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-
         //Включаем ЧПУ
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+
             'rules' => [
+                //Изменение url
+                'novosti'   => 'news/news-list', 
+                'novosti/<id:\d+>' => 'news/view',
+               // 'novosti/<id:\d+>/<test:\w+>' => 'news/view',
+                /* [
+                    'pattern' => 'novosti/<id:\d+>/<test:\w+>',
+                    'route' => 'news/view',
+                    'suffix' => '.json',
+                ],*/
+
             ],
         ],
-
         //Регистрируем класс в качестве компонента Yii
         'stringHelper' => [
             'class' => 'frontend\components\StringHelper',
