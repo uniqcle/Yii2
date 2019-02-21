@@ -31,5 +31,4 @@ Url::to(['news/view', 'id' => $item['idnews']]);
 
 <?php endforeach; ?>
 
-
  

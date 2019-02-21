@@ -21,7 +21,11 @@ class NewsController extends Controller
 		 	'list' => $list
 		 ]);
 	}
+<<<<<<< HEAD
  
+=======
+<<<<<<< HEAD
+>>>>>>> 9e6c79759a2bf9699bc4a58b91a882610edffc92
 
 	/**
 	 * Генерация конкретной новости
@@ -38,5 +42,14 @@ class NewsController extends Controller
 		]);
 	}
 
+<<<<<<< HEAD
  
+=======
+
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 2466a4b... Работа с компонентом urlManager
+=======
+>>>>>>> 651fb7b01e67ba4490a8e5e9a7bd8f74d674a90c
+>>>>>>> 9e6c79759a2bf9699bc4a58b91a882610edffc92
 }
