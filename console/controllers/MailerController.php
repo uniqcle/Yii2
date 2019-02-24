@@ -3,6 +3,9 @@
 namespace console\controllers; 
 
 use Yii; 
+use console\models\News;
+use console\models\Subscribers; 
+use console\models\Sender;
 
 class MailerController extends \yii\console\Controller 
 {
@@ -21,4 +24,22 @@ class MailerController extends \yii\console\Controller
         	echo 'Письмо успешно отправлено'; 
         }
 	}
+
+        public function actionMailing(){
+                //Получение списка новостей
+                $listNews = News::getList();
+
+                //Получение подписчиков
+                $subscribers = Subscribers::getSubscribers();
+
+                //Отправка письма
+                $result = Sender::run($listNews, $subscribers);
+
+               //По результатам отправки писем, меняем статус новостей
+               if( $result ){
+                News::changeStatus($listNews);
+                  echo 'Записи обновлены '. $result;
+               } 
+
+        }
 }

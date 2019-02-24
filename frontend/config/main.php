@@ -56,7 +56,7 @@ return [
         ],
         //Регистрируем класс в качестве компонента Yii
         'stringHelper' => [
-            'class' => 'frontend\components\StringHelper',
+            'class' => 'common\components\StringHelper',
         ], 
 
         //Регистрируем компонент отправки почты
