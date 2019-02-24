@@ -12,5 +12,8 @@ return [
         'StringHelper' =>  [
             'class' => 'common\components\StringHelper',
         ], 
+        'FileHelper' => [
+            'class' => 'common\components\FileHelper'
+        ]
     ],
 ];
