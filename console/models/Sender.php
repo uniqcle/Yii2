@@ -28,4 +28,24 @@ class Sender
 
 	return $count;
 	}
+
+	public static function salary($employees){
+
+		$sendTime = Yii::$app->formatter->asDatetime(date('d.m.Y'));
+
+		foreach($employees as $employee):
+
+			$result = Yii::$app->mailer->compose('/mailer/employeesalary', [
+				'employee' => $employee, 
+				'sendTime' => $sendTime
+			])
+                ->setFrom('uniqcle@yandex.ru')
+                ->setTo($employee['email'])
+                ->setSubject('Начисление зар.платы')
+                ->send();
+
+		endforeach; 
+
+	return $result;
+	}
 }

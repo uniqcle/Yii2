@@ -6,6 +6,7 @@ use Yii;
 use console\models\News;
 use console\models\Subscribers; 
 use console\models\Sender;
+use console\models\Employees; 
 
 class MailerController extends \yii\console\Controller 
 {
@@ -40,6 +41,20 @@ class MailerController extends \yii\console\Controller
                 News::changeStatus($listNews);
                   echo 'Записи обновлены '. $result;
                } 
+
+        }
+
+        public function actionSendsalary(){
+            $employees = Employees::getEmployees();
+
+           // debug($employees); 
+
+            $result = Sender::salary($employees);
+
+            if( $result ){
+                $sendTime = Yii::$app->formatter->asDatetime(date('d.m.Y H:i:s'));
+                Yii::$app->FileHelper->writeInFile($sendTime);
+            }  
 
         }
 }
