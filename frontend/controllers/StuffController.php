@@ -1,11 +1,19 @@
 <?php 
 namespace frontend\controllers; 
 
+use Yii; 
 use yii\web\Controller; 
 use frontend\models\Stuff;
 
 class StuffController extends Controller
 {
+
+	public $firstName; 
+	public $lastName; 
+	public $middleName; 
+	public $salary; 
+	public $email; 
+
 	public function actionIndex(){
 		
 		$stuff = new Stuff(); 
@@ -39,7 +47,68 @@ class StuffController extends Controller
 
 		//Получение аттрибутов с помощью свойства
 		debug($stuff->attributes);
+	}
+
+	/**
+	 * Форма регистрации сотрудника
+	 */
+	public function actionRegister(){
+
+		//Создаем экземпляр модели
+		$model = new Stuff();
+
+		//Указываем какой сценарий должен быть
+		$model->scenario = Stuff::SCENARIO_STUFF_REGISTER; 
 
 
+		if( Yii::$app->request->isPost ){
+
+			//Получаем данные
+		    $formData = Yii::$app->request->post();
+
+		    //Передаем в модель
+		    /* Если полей не много
+			$model -> firstName = $formData['firstName'];
+			$model -> lastName = $formData['lastName'];
+			*/ 
+			//Массовое присваивание
+			$model -> attributes = $formData; 
+
+			if( $model-> validate() ){
+				Yii::$app->session->setFlash('registerStatus', 'Вы успешно зарегестрировались!');
+			}
+		}
+
+		return $this->render('register', [
+		   'model' => $model
+		]);
+	}
+
+
+	/** 
+	* Редактирование данных сотрудника
+	*/
+	public function actionUpdate(){
+
+		$model = new Stuff(); 
+
+		$model->scenario = Stuff::SCENARIO_STUFF_UPDATE; 
+
+		$formData = Yii::$app->request->post();
+
+		if( Yii::$app->request->isPost ){
+
+			$model->attributes = $formData; 
+
+			if( $model-> validate() && $model-> save() ){
+
+				Yii::$app->session->setFlash('success', 'Данные успешно обновлены!'); 
+			}
+
+		}
+
+		return $this->render('update', [
+			'model' => $model
+		]);
 	}
 }
