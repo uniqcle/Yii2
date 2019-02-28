@@ -74,7 +74,10 @@ class StuffController extends Controller
 			//Массовое присваивание
 			$model -> attributes = $formData; 
 
+
+
 			if( $model-> validate() ){
+
 				Yii::$app->session->setFlash('registerStatus', 'Вы успешно зарегестрировались!');
 			}
 		}
