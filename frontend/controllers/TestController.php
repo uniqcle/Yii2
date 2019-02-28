@@ -5,6 +5,7 @@ namespace frontend\controllers;
 //Подключили глобальный класс Yii
 use Yii; 
 use yii\web\Controller; 
+use frontend\models\Validation; 
 
 class TestController extends Controller
 {
@@ -36,5 +37,24 @@ class TestController extends Controller
         if($result){
         	echo 'Письмо успешно отправлено'; 
         }
+	}
+
+	public function actionValidation(){
+
+		$model = new Validation(); 
+
+		$formData = Yii::$app->request->post();
+
+		if( Yii::$app->request->isPost ){
+			$model->testData = $formData['testData'];
+
+			if( $model->validate() ){
+				Yii::$app->session->setFlash('validateStatus', 'Данные успешно валидированы!');
+			}
+		}
+
+		return $this->render('validation', [
+			'model' => $model
+		]);
 	}
 }
