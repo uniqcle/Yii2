@@ -69,8 +69,8 @@ return [
             'transport' => [
                 'class' => 'Swift_SmtpTransport',
                 'host' => 'smtp.yandex.ru',
-                'username' => 'un...@yandex.ru',
-                'password' => '******',
+                'username' => 'uniqcle@yandex.ru',
+                'password' => 'Kirill2207',
                 'port' => '465',
                 'encryption' => 'ssl',
                  'streamOptions' => [
