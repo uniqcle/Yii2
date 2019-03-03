@@ -1,6 +1,7 @@
 <?php 
 namespace frontend\models;
 
+use Yii; 
 use yii\base\Model; 
 
 class Stuff  extends Model 
@@ -46,12 +47,15 @@ class Stuff  extends Model
 
 	}
 
+	// Регистрация нового сотрудника
 	public function save(){
 
-		$sql = ""; 
+		 $sql = "INSERT INTO employees (id, `firstName`, `lastName`, `middleName`, `bday`, `wday`, `city`, `position`, `number_id`, `email`) VALUES (null, '{$this->firstName}', '{$this->lastName}', '{$this->middleName}', '{$this->bday}', '{$this->wday}', '{$this->city}', '{$this->position}', '{$this->number_id}', '{$this->email}'); "; 
 
 		return Yii::$app->db->createCommand($sql)->execute();
 	}
+
+ 
 
 
 }

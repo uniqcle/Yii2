@@ -74,9 +74,7 @@ class StuffController extends Controller
 			//Массовое присваивание
 			$model -> attributes = $formData; 
 
-
-
-			if( $model-> validate() ){
+			if( $model-> validate()  && $model->save() ){
 
 				Yii::$app->session->setFlash('registerStatus', 'Вы успешно зарегестрировались!');
 			}
@@ -86,32 +84,5 @@ class StuffController extends Controller
 		   'model' => $model
 		]);
 	}
-
-
-	/** 
-	* Редактирование данных сотрудника
-	*/
-	public function actionUpdate(){
-
-		$model = new Stuff(); 
-
-		$model->scenario = Stuff::SCENARIO_STUFF_UPDATE; 
-
-		$formData = Yii::$app->request->post();
-
-		if( Yii::$app->request->isPost ){
-
-			$model->attributes = $formData; 
-
-			if( $model-> validate() && $model-> save() ){
-
-				Yii::$app->session->setFlash('success', 'Данные успешно обновлены!'); 
-			}
-
-		}
-
-		return $this->render('update', [
-			'model' => $model
-		]);
-	}
+ 
 }
