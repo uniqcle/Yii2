@@ -81,7 +81,26 @@ return [
                     ],
                 ], 
         ],
-],
+     ],
+
+
+         //На время разработки isotope отключаем стандартные комплекты ресурсов Yii2 js
+        /* 'assetManager' => [
+            'bundles' => [
+                    //Подключаем JqueryAsset
+                    'yii\web\JqueryAsset' => [
+                        'js'=>[]
+                    ],
+                    'yii\web\YiiAsset' => [
+                        'js'=>[]
+                    ],
+                    'yii\bootstrap\BootstrapPluginAsset' => [
+                        'js'=>[]
+                    ],
+              ],
+         ],*/
+
+
          
     ],
     'params' => $params,
