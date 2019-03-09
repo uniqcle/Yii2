@@ -55,6 +55,12 @@ class Stuff  extends Model
 		return Yii::$app->db->createCommand($sql)->execute();
 	}
 
+	public static function getEmails(){
+		$sql = "SELECT * FROM subscribers"; 
+
+		return Yii::$app->db->createCommand($sql)->queryAll();
+	}
+
  
 
 
