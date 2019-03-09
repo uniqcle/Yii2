@@ -5,6 +5,9 @@
 use yii\helpers\Url; 
 //use yii\helpers\Url; 
 
+use frontend\widgets\getList\GetList; 
+
+
 $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
@@ -25,15 +28,7 @@ $this->title = 'My Yii Application';
 
                 <p>
                     
-                    <?php foreach($newsList as $newsItem):  ?>
-
-                        <a href="<?=Url::to(['news/view',  'id' => $newsItem['idnews']]); ?>"><?=$newsItem['title']; ?></a></br>
-                        <!-- Yii::$app->urlManager->createUrl(['site/view', 'id' => $newsItem['idnews']]); --> 
-
-
-                    <?php endforeach; ?>
-
-
+                    <?=getList::widget(['showLimit' => 3]); ?>
                 </p>
 
                 <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
