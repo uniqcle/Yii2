@@ -1,4 +1,12 @@
 <?php 
+$this->registerMetaTag([
+  'name' => 'Заказ окон', 
+  'content' => 'На данной странице вы можете заказа окна'
+]);
+
+ ?>
+
+<?php 
 
 if( $model -> hasErrors() ){
 	debug ($model -> getErrors() );
