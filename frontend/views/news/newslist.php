@@ -1,3 +1,13 @@
+<?php 
+//Подключение Asset'a
+use frontend\assets\IsotopeAsset; 
+
+IsotopeAsset::register($this); 
+ 
+?>
+
+
+
 <!-- 
 
 Yii::$app->urlManager->createUrl(['news/view', 'id' => $item['idnews']]);
