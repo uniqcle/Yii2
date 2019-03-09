@@ -19,6 +19,7 @@ class Stuff  extends Model
 	public $city; 
 	public $position; 
 	public $number_id; 
+ 
 
 	//Определяем сценаии
 	public function scenarios(){
@@ -57,6 +58,14 @@ class Stuff  extends Model
 
 	public static function getEmails(){
 		$sql = "SELECT * FROM subscribers"; 
+
+		return Yii::$app->db->createCommand($sql)->queryAll();
+	}
+
+
+	public static function getMaxSalary($maxEmployee){
+
+		$sql = "SELECT id, firstName from employees WHERE salary IN (SELECT salary FROM employees GROUP BY salary DESC) LIMIT ".$maxEmployee.";"; 
 
 		return Yii::$app->db->createCommand($sql)->queryAll();
 	}
