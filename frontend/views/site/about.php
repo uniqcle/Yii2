@@ -4,6 +4,7 @@
 
 use yii\helpers\Html;
 use yii\helpers\Url; 
+use frontend\widgets\getList\GetList; 
 
 $this->title = 'About';
 $this->params['breadcrumbs'][] = $this->title;
@@ -17,10 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     			<p>This is the About page. You may modify the following file to customize its content:</p>
     		</div>
     		<div class="col-md-6">
-    			<?php foreach($newsList as $newsItem): ?>
-    			<a href="<?=Url::to(['site/view', 'id' => $newsItem['idnews']]); ?>"><?=$newsItem['title']; ?></a></br>
-
-    		    <?php endforeach;  ?>
+                <?php echo GetList::widget(['showLimit' => 4]); ?>
     		</div>
     	</div>
     </div>
