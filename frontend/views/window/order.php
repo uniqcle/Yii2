@@ -4,7 +4,14 @@ $this->registerMetaTag([
   'content' => 'На данной странице вы можете заказа окна'
 ]);
 
- ?>
+//Добавление хлебных крошек
+$this->params['breadcrumbs'] = [
+  'test1', 
+  ['label' => 'test2', 'url' => ['site/index'] ],
+  'test3'
+];
+
+?>
 
 <?php 
 

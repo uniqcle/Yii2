@@ -4,7 +4,10 @@
 //Во View передается экземпляр класса View
 $this->title = 'Подписка на новости'; 
 
-	use yii\helpers\Url; 
+use yii\helpers\Url; 
+
+
+
 ?>
 
 <?php 

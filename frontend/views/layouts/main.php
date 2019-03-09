@@ -61,6 +61,7 @@ AppAsset::register($this);
     ?>
 
     <div class="container">
+        <!-- Виджет Breadcrumbs. Сюда подставляются "Хлебные крошки" --> 
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
