@@ -3,6 +3,7 @@ namespace frontend\controllers;
 
 use yii\web\Controller; 
 use yii\helpers\Html; 
+use frontend\models\Stuff;
 
 class HelpersController extends Controller  
 {
@@ -39,6 +40,15 @@ class HelpersController extends Controller
 
 		return $this->render('escape-output', [
 			'comments' => $comments
+		]);
+	}
+
+	public function actionArrayHelper(){
+
+		$stuffList = Stuff::getStuffList(); 
+
+		return $this->render('array-helper', [
+			'stuffList' => $stuffList
 		]);
 	}
 }

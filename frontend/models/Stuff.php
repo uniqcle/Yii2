@@ -70,6 +70,14 @@ class Stuff  extends Model
 		return Yii::$app->db->createCommand($sql)->queryAll();
 	}
 
+
+	public static function getStuffList(){
+
+		$sql = "SELECT * FROM yii2advanced.employees;"; 
+
+		return Yii::$app->db->createCommand($sql)->queryAll();
+	}
+
  
 
 
