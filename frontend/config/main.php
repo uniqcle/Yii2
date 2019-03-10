@@ -108,6 +108,7 @@ return [
     //Устанавливаем глобально псевдонимы
     'aliases' => [
         '@upload' => '/var/www/project/frontend/web/upload',
-        '@photos' => '@upload/photos'
+        '@photos' => '@upload/photos', 
+        '@images' => '/files/photos'
     ]
 ];
