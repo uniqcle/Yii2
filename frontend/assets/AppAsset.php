@@ -12,23 +12,17 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/site.css',
-        'css/bootstrap.min.css', 
-        'css/main.css',
-        'css/font-awesome.min.css',
-        'css/prettyPhoto.css',
-        'css/price-range.css',
-        'css/animate.css',
-        'css/responsive.css',
+        'css/bootstrap/css/bootstrap.min.css',
+        "css/css_blog/all.min.css", 
 
+
+ 
     ];
     public $js = [
-    "js/jquery.js",  
-    "js/bootstrap.min.js",  
-    "js/jquery.scrollUp.min.js",
-    "js/price-range.js",
-    "js/jquery.prettyPhoto.js",
-    "js/main.js",
+    "js/jquery/jquery.min.js", 
+    "js/bootstrap/js/bootstrap.bundle.min.js", 
+   
+ 
 
     ];
     public $depends = [

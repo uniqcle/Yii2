@@ -157,6 +157,11 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionSamplePost(){
+
+        return $this->render('sample-post');
+    }
+
     /**
      * Signs user up.
      *
