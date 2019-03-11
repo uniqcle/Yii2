@@ -13,6 +13,7 @@ use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use frontend\models\News; 
+use frontend\models\Comment; 
 
 /**
  * Site controller
@@ -229,6 +230,33 @@ class SiteController extends Controller
 
         return $this->render('resetPassword', [
             'model' => $model,
+        ]);
+    }
+
+
+    //Страница комментарий
+    public function actionComments(){
+
+        $model = new Comment();
+
+        if( Yii::$app->request->isPost ){
+
+            $formData = Yii::$app->request->post();
+
+            $model -> attributes = $formData; 
+
+            if ( $model->validate() && $model->save() ){
+
+                    Yii::$app->setFlash('success', 'Ваш комментарий опубликован.'); 
+
+            } 
+        }
+
+        $commentList = Comment::getComments(); 
+
+        return $this->render('comments', [
+            'model'       => $model, 
+            'commentList' => $commentList
         ]);
     }
 }
