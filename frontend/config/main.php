@@ -15,7 +15,7 @@ return [
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
-            'enableCsrfValidation' => true,  //Включаем мета-теги, которые позволяют блокировать поддельные запросы
+            'enableCsrfValidation' => false,  //Включаем мета-теги, которые позволяют блокировать поддельные запросы
         ],
         'user' => [
             'identityClass' => 'common\models\User',

@@ -27,6 +27,8 @@ if( Yii::$app -> session->hasFlash('registerStatus') ){
 
 <div class="row">
 <form method = "post">
+
+  <input type="hidden" name="_csrf" value="<?=Yii::$app->request->getCsrfToken()?>" />
  
   <div class = "row">
     <div class="form-group col-md-6 col-md-offset-3">
