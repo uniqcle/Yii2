@@ -3,6 +3,7 @@ namespace frontend\models;
 
 use Yii; 
 use yii\base\Model; 
+use yii\helpers\ArrayHelper; 
 
 class Stuff  extends Model 
 {
@@ -76,6 +77,17 @@ class Stuff  extends Model
 		$sql = "SELECT * FROM yii2advanced.employees;"; 
 
 		return Yii::$app->db->createCommand($sql)->queryAll();
+	}
+
+
+	//Получения списка городов
+	public static function getCitiesList(){
+
+		$sql = "SELECT * FROM yii2advanced.cities; "; 
+
+		$result =  Yii::$app->db->createCommand($sql)->queryAll();
+
+		return ArrayHelper::map($result, 'id', 'cityName');
 	}
 
  

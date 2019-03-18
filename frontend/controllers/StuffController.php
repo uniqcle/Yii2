@@ -72,11 +72,14 @@ class StuffController extends Controller
 			$model -> lastName = $formData['lastName'];
 			*/ 
 			//Массовое присваивание
-			$model -> attributes = $formData; 
+			$model -> attributes = $formData['Stuff']; 
+
+			//или так
+			//$model -> load( Yii->request->post() );
 
 			if( $model-> validate()  && $model->save() ){
 
-				Yii::$app->session->setFlash('registerStatus', 'Вы успешно зарегестрировались!');
+				Yii::$app->session->setFlash('success', 'Вы успешно зарегестрировались!');
 			}
 		}
 

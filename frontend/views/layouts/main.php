@@ -3,6 +3,7 @@
 use yii\helpers\Html; 
 use frontend\assets\AppAsset;
 use frontend\assets\LtAppAsset; 
+use common\widgets\Alert;
 
 AppAsset::register($this);
 LtAppAsset::register($this); 
@@ -160,7 +161,8 @@ LtAppAsset::register($this);
 			</div>
 		</div><!--/header-bottom-->
 	</header><!--/header-->
-	
+
+ <?= Alert::widget() ?>
 <?php echo $content; ?>
 	
 	<footer id="footer"><!--Footer-->
