@@ -4,6 +4,7 @@ namespace frontend\controllers;
 
 use Yii; 
 use frontend\models\Book; 
+use frontend\models\Authors; 
 
 class BookshopController extends \yii\web\Controller
 {
@@ -47,6 +48,30 @@ class BookshopController extends \yii\web\Controller
 
     	return $this->render('add', [
     		'book' => $book
+    	]); 
+    }
+
+    //Добавление автора
+    public function actionAddAuthor(){
+
+    	$author = new Authors(); 
+
+    	if( Yii::$app->request->isPost ){
+
+    		$author -> load( Yii::$app->request->post() ); 
+
+    		if ( $author->validate() && $author ->save() ){
+
+    			Yii::$app->session->setFlash('success', 'Данные успешно сохранены!');
+
+    			return $this->refresh(); 
+    		}
+
+    	}
+ 
+
+    	return $this->render('add-authors', [
+    		'author' => $author
     	]); 
     }
 
